@@ -1,0 +1,29 @@
+在百度上看到许多安装过程特别麻烦的～～还要手动下载安装。。开门见山，三行命令。
+
+第一步：添加源。
+
+sudo add-apt-repository ppa:djcj/hybrid
+
+第二步：更新源。
+
+sudo apt-get update
+
+第三步：下载安装。
+
+sudo apt-get install ffmpeg
+
+如上，就安装好了～
+
+使用：
+
+ffmpeg -ss 01:00:00 -i input_file_h264.mp4 -vcodec copy -acodec copy -t 00:06:00 output_file.mp4
+
+其中
+-ss 表示分割视频开始时间
+时间单位为小时：分：秒
+-i 输入文件
+input_file_h264.mp4 表示要分割的视频
+-vcodec copy 复制视频编码
+-acodec copy 复制音频编码
+-t 表示从开始分割到分割结束整个分割视频的时间
+output_file.mp4 表示分割后的视频
