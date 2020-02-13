@@ -16,7 +16,7 @@ sudo apt-get install ffmpeg
 
 使用：
 
-ffmpeg -ss 01:00:00 -i input_file_h264.mp4 -vcodec copy -acodec copy -t 00:06:00 output_file.mp4
+ffmpeg -ss 01:00:00 -to 00:06:00 -i input_file_h264.mp4 -vcodec copy -acodec copy  -strict -2 output_file.mp4
 
 其中
 -ss 表示分割视频开始时间
@@ -26,4 +26,5 @@ input_file_h264.mp4 表示要分割的视频
 -vcodec copy 复制视频编码
 -acodec copy 复制音频编码
 -t 表示从开始分割到分割结束整个分割视频的时间
+-to 表示结束的时间
 output_file.mp4 表示分割后的视频
